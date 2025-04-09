@@ -6,6 +6,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 export const routes: Routes = [
     {
@@ -38,7 +39,10 @@ export const routes: Routes = [
     {
         path: "footer",
         component: FooterComponent
-    }
-    
+    },
+    {
+        path: "carousel",
+        component: CarouselComponent
+    },
 
 ];
