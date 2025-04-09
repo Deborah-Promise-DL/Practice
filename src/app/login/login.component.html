@@ -1,0 +1,31 @@
+<div class="container mt-5">
+        <form #form="ngForm" class="row g-3 needs-validation" novalidate>
+
+            <h2 class="mb-4 text-center">Login Form</h2>      
+              <div class="col-12">
+                <label class="form-label">User Id : <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" #userId="ngModel" [(ngModel)]="userObj.userId" name="userId" 
+                placeholder="Create a username" required/>
+                <div class="text-danger">
+                  <span *ngIf= "userId.errors?.['required'] && userId.touched">This field is required</span>
+                </div>
+              </div>
+          
+              <div class="col-12">
+                <label class="form-label">Password : <span class="text-danger">*</span></label>
+                <input type="password" class="form-control" #password="ngModel" [(ngModel)]="userObj.password" name="password"
+                placeholder="Create a Password" required />
+                <div class="text-danger">
+                  <span *ngIf= "password.errors?.['required'] && password.touched">This field is required</span>
+                </div>
+              </div>
+          
+          
+              <div class="d-flex justify-content-between mt-3">
+                <button class="btn btn-secondary" [routerLink]="['/registration']"> Not Registered? Register Here </button>
+                <button class="btn btn-primary" [disabled]= "form.invalid" type="submit" (click)="onSubmit()"> Login</button>
+              </div>
+            </form>
+          </div>
+          
+ 

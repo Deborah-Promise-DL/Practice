@@ -1,0 +1,28 @@
+.footer {
+    background-color: #231f26; /* Deep purple */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0; 
+    z-index: 10;    
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-logo img {
+    height: 40px;
+  }
+  
+  .footer-logo span {
+    font-size: 15px;
+    /* font-weight: bold; */
+  }
+  

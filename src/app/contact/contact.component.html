@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Contact Form</h2>
+    <form #form="ngForm" class="row g-3 needs-validation" novalidate>
+      
+      <div class="col-12">
+        <label class="form-label">Name: <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" #name="ngModel" [(ngModel)]="userObj.name" name="name" required />
+        <div class="text-danger">
+          <span *ngIf= "name.errors?.['required'] && name.touched">This field is required</span>
+        </div>
+      </div>
+  
+      <div class="col-12">
+        <label class="form-label">Email address: <span class="text-danger">*</span></label>
+        <input type="email" class="form-control" #email="ngModel" [(ngModel)]="userObj.email" name="email" required />
+        <div class="text-danger">
+          <span *ngIf= "email.errors?.['required'] && email.touched">This field is required</span>
+        </div>
+      </div>
+  
+      <div class="col-12">
+        <label class="form-label">Mobile number: <span class="text-danger">*</span></label>
+        <input type="number" class="form-control" #mobile="ngModel" [(ngModel)]="userObj.mobile" name="mobile" required />
+        <div class="text-danger">
+          <span *ngIf= "mobile.errors?.['required'] && mobile.touched">This field is required</span>
+        </div>
+      </div>
+  
+      <div class="col-12 d-flex gap-2">
+        <button class="btn btn-primary" [disabled]="form.invalid" type="submit" (click)="onSubmit()">Submit</button>
+        <button class="btn btn-secondary" type="reset">Clear</button>
+      </div>
+    </form>
+  </div>
+  
